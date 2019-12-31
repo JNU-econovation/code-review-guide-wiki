@@ -5,7 +5,7 @@ class LinkedList {
       this.count = 0;
     }
   
-    get length() {
+    getlength() {
       return this.count;
     }
   

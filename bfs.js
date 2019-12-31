@@ -1,7 +1,11 @@
 const listUtil = require('./linkedlist.js')
 const queueUtil = require('./queue.js')
+const disjointSetUtil = require('./disjoint_set.js')
+
+const disjoint_set = new disjointSetUtil.DisjointSet()
 const queue = new queueUtil.Queue()
 const checked = new Set()
+
 const tempData1 = {
     "_id" : "5e0997d5b6cde30684cf8816",
     "dest" : [
@@ -113,7 +117,7 @@ const tempData5 = {
     "__v" : 0
 }
 //make linked list
-const dummyData = [tempData1, tempData2, tempData3, tempData4, tempData5]
+const dummyData = [tempData1, tempData2, tempData3, tempData5, tempData4]
 
 const list = new listUtil.LinkedList()
 dummyData.forEach(element => {
@@ -123,17 +127,17 @@ const target = "01077777777"
 
 queue.push(list.head.data.source)
 list.removeFirst()
-const ret = new Array()
 
 while (!queue.empty()) {
     const top = queue.pop()
-    
-    //return array에 중간 다리 추가
-    ret.push(top)
+
+    //disjoint set에 추가
+    disjoint_set.make_set(top)
 
     //찾으면
     if(top === target){
         console.log("FOUND!" + target)
+        disjoint_set.printSet()
         break
     }
 
@@ -142,15 +146,24 @@ while (!queue.empty()) {
     if(!checked.has(top)){
         //set에 데이터 넣기
         checked.add(top)
+
+        const friend = list.head.data.source
         //큐에 친구 넣기
-        queue.push(list.head.data.source)
+        queue.push(friend)
+
+        //union 만들기
+        disjoint_set.make_set(friend)
+        disjoint_set.union(friend, top)
+
         list.removeFirst()
     }
 
 }
 
+/*
 if (ret.length > 0) {
     console.log("촌 수 : " + ret.length)
     console.log(ret)
 }
+ */
 
