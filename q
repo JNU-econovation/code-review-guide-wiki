@@ -1,0 +1,17 @@
+[33mcommit 7384afd2163e3231de4a2d958d8813ecebb90211[m[33m ([m[1;36mHEAD -> [m[1;32mbfs_algorithm[m[33m)[m
+Author: forbid403 <forbid403@naver.com>
+Date:   Tue Dec 31 15:14:39 2019 +0900
+
+    [fix] functionize
+
+[33mcommit 5a62cac77954a7461eb7c4cf80cca57f152bfb4f[m
+Author: forbid403 <forbid403@naver.com>
+Date:   Tue Dec 31 14:04:46 2019 +0900
+
+    [complete] disjoint set
+
+[33mcommit 4ad4b8ff09e6631e39f2914da3ed1106cecf7448[m
+Author: forbid403 <forbid403@naver.com>
+Date:   Mon Dec 30 21:38:22 2019 +0900
+
+    [complete] queue, list, bfs

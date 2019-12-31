@@ -1,4 +1,3 @@
-
 class Queue {
     constructor(){
         this.q = [];
@@ -8,7 +7,6 @@ class Queue {
     }
     push(val) {
         this.q.push(val)
-        //console.log(val + " pushed")
     }
     pop(){
         //console.log("popped")
