@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body onload=run()>
+    <h2>Vanilla JS Carousel</h2>
+    <div class ="carousel">
+        <button class="carousel__button carousel__button--left">
+            <img src="image/left.svg" alt =""/>
+        </button>
+        <div class="carousel__track-container">
+            <ul class="carousel__track">
+                <li class="carousel__slide current_slide">
+                    <img class ="carousel__image" src="https://picsum.photos/seed/first/600" alt=""/>
+                </li>
+                <li class="carousel__slide">
+                    <img class ="carousel__image" src="https://picsum.photos/seed/second/600" alt=""/>
+                </li>
+                <li class="carousel__slide">
+                    <img class ="carousel__image" src="https://picsum.photos/seed/third/600" alt=""/>
+                </li>
+            </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">
+            <img src="image/right.svg" alt =""/>
+        </button>
+        <div class="carousel__nav">
+            <button class="carousel__indicator current_slide"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/carousel.js"></script>
+
+</html>
