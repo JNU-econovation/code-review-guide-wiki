@@ -11,7 +11,6 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 const run = () => {
 
-    // arrange the slides next to one another
     slides.forEach(setSlidePosition);
 
     nextButton.addEventListener('click', handleNextButton);
